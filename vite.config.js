@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Maruthi_web/',
+base: process.env.NODE_ENV === 'production' ? '/Maruthi_web/' : '/',
   plugins: [react()],
 })
